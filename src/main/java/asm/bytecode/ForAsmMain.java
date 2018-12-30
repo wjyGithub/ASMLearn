@@ -21,8 +21,8 @@ import static org.objectweb.asm.Opcodes.*;
  *    for(int i=0; i<100; i++) {
  *      sum += i;
  *   }
+ *   return sum;
  * }
- * return sum;
  * @author jianyuan.wei@hand-china.com
  * @date 2018/12/29 23:58
  */
