@@ -43,7 +43,7 @@ public class MethodAddCodeMain {
                 return new AddCodeMethodVisitor_1(this.api,mv);
 
                 //方式二
-               // return new AddCodeMethodVisitor_2(this.api,mv);
+                //return new AddCodeMethodVisitor_2(this.api,mv);
 
             }
             return super.visitMethod(access, name, descriptor, signature, exceptions);
@@ -62,18 +62,18 @@ public class MethodAddCodeMain {
         /**方法的开始,即刚进入方法里面*/
         @Override
         public void visitCode() {
-            mv.visitFieldInsn(Opcodes.GETSTATIC,"java/lang/System","out","Ljava/io/PrintStream;");
+            mv.visitFieldInsn(GETSTATIC,"java/lang/System","out","Ljava/io/PrintStream;");
             mv.visitLdcInsn("方式一:方法开始运行");
-            mv.visitMethodInsn(INVOKEVIRTUAL,"java/io/PrintStream","println","(Ljava/lang/String;)V");
+            mv.visitMethodInsn(INVOKEVIRTUAL,"java/io/PrintStream","println","(Ljava/lang/String;)V",false);
             super.visitCode();
         }
 
         @Override
         public void visitInsn(int opcode) {
             if(opcode == ARETURN || opcode == RETURN ) {
-                mv.visitFieldInsn(Opcodes.GETSTATIC,"java/lang/System","out","Ljava/io/PrintStream;");
+                mv.visitFieldInsn(GETSTATIC,"java/lang/System","out","Ljava/io/PrintStream;");
                 mv.visitLdcInsn("方式一:方法调用结束");
-                mv.visitMethodInsn(INVOKEVIRTUAL,"java/io/PrintStream","println","(Ljava/lang/String;)V");
+                mv.visitMethodInsn(INVOKEVIRTUAL,"java/io/PrintStream","println","(Ljava/lang/String;)V",false);
             }
             super.visitInsn(opcode);
         }

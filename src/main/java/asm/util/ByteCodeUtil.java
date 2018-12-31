@@ -1,4 +1,4 @@
-package asm.bytecode;
+package asm.util;
 
 
 import org.apache.commons.lang3.StringUtils;
