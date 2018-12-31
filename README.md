@@ -7,6 +7,8 @@ asm/bytecode
     该包下提供了通过字节码编写一个从1到100的求和函数
 asm/create/bean
     该包下提供了通过字节码编写了带有set/get方法的实体类
+asm/instruction
+    NewInstructionMain:该类提供了创建一个对象的字节码编写,即new Object()
 asm/modify/access
     该包下提供了修改成员属性的权限修饰符的方法
 asm/modify/add

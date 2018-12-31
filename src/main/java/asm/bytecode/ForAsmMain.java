@@ -1,6 +1,8 @@
 package asm.bytecode;
 
 
+import asm.util.ByteCodeUtil;
+import asm.util.ClassUtil;
 import asm.util.MyClassLoader;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Label;

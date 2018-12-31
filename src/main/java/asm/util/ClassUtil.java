@@ -1,4 +1,4 @@
-package asm.bytecode;
+package asm.util;
 
 /**
  * 类操作工具类
