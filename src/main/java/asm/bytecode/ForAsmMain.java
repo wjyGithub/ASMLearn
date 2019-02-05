@@ -76,7 +76,7 @@ public class ForAsmMain {
         spainMethod.visitVarInsn(ILOAD,2);
         //将常量100放入操作数栈中
         spainMethod.visitVarInsn(BIPUSH,100);
-        //取出操作数栈的前两个数据(之后这两个数据都会弹出操作数据),比较,即 i<100时,执行下面指令,否则跳转到endLabel位置
+        //取出操作数栈的前两个数据(之后这两个数据都会弹出操作数据),比较,即 i<=100时,执行下面指令,否则跳转到endLabel位置
         spainMethod.visitJumpInsn(IF_ICMPGT,endLabel);
         //todo 做一些逻辑操作
         // 取出sum的数据，放入操作数栈
